@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Everyday Attire - Premium Fashion Store</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">Everyday Attire</a>
+                <nav class="nav desktop-nav">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About Us</a>
+                    <a href="contact.html">Contact</a>
+                </nav>
+                <a href="cart.html" class="cart-icon">
+                    <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/>
+                    </svg>
+                    <span class="cart-count" id="cartCount">0</span>
+                </a>
+            </div>
+            <nav class="nav mobile-nav">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Slider -->
+    <div class="hero-slider">
+        <div class="slide active">
+            <img src="https://images.unsplash.com/photo-1601234979142-1fb9d0431bce?w=1920" alt="New Collection">
+            <div class="slide-content">
+                <h1>New Collection</h1>
+                <p>Discover our latest arrivals in premium fashion for women and men</p>
+                <a href="#featured" class="btn">Shop Now</a>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="https://images.unsplash.com/photo-1766524871302-88590e1fa1bf?w=1920" alt="Summer Sale">
+            <div class="slide-content">
+                <h1>Summer Sale</h1>
+                <p>Up to 50% off on selected items. Limited time offer!</p>
+                <a href="#featured" class="btn">View Deals</a>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=1920" alt="Premium Quality">
+            <div class="slide-content">
+                <h1>Premium Quality</h1>
+                <p>Handpicked styles crafted with attention to detail</p>
+                <a href="#featured" class="btn">Explore</a>
+            </div>
+        </div>
+        <button class="slider-btn prev" onclick="changeSlide(-1)">&#10094;</button>
+        <button class="slider-btn next" onclick="changeSlide(1)">&#10095;</button>
+        <div class="slider-dots">
+            <span class="dot active" onclick="currentSlide(0)"></span>
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+        </div>
+    </div>
+
+    <!-- Featured Products -->
+    <section id="featured" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured Products</h2>
+                <p>Discover our handpicked collection for women</p>
+            </div>
+            <div class="products-grid" id="featuredProducts"></div>
+        </div>
+    </section>
+
+    <!-- New Arrivals -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>New Arrivals</h2>
+                <p>Fresh styles just added to our collection</p>
+            </div>
+            <div class="products-grid" id="newArrivals"></div>
+        </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="section">
+        <div class="container">
+            <div class="cta-banner">
+                <div class="cta-content">
+                    <h2>Special Offer</h2>
+                    <p>Get 30% off on all new arrivals this week!</p>
+                    <p class="offer-code">Use code: NEWCOLLECTION30 at checkout</p>
+                    <a href="#featured" class="btn">Shop Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Our Customers Say</h2>
+                <p>Real reviews from real customers</p>
+            </div>
+            <div class="testimonials-grid" id="testimonials"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h3>Everyday Attire</h3>
+                    <p>Your destination for premium fashion and everyday wear. Quality clothing for modern lifestyles.</p>
+                </div>
+                <div>
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Policies</h3>
+                    <ul>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms & Conditions</a></li>
+                        <li><a href="returns.html">Return & Refund Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Contact Us</h3>
+                    <ul class="contact-info">
+                        <li>123 Fashion Street<br>New York, NY 10001, USA</li>
+                        <li><a href="mailto:Care@attire.store">Care@attire.store</a></li>
+                        <li><a href="tel:+16723658854">+1-672-365-8854</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Everyday Attire. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

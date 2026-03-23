@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - Everyday Attire</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">Everyday Attire</a>
+                <nav class="nav desktop-nav">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About Us</a>
+                    <a href="contact.html">Contact</a>
+                </nav>
+                <a href="cart.html" class="cart-icon active">
+                    <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/>
+                    </svg>
+                    <span class="cart-count" id="cartCount">0</span>
+                </a>
+            </div>
+            <nav class="nav mobile-nav">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Cart Content -->
+    <div class="container page-content">
+        <h1 class="page-title">Shopping Cart</h1>
+
+        <!-- Empty Cart -->
+        <div id="emptyCart" class="empty-cart" style="display: none;">
+            <h2>Your Cart is Empty</h2>
+            <p>Add some items to get started!</p>
+            <a href="index.html" class="btn btn-primary">Continue Shopping</a>
+        </div>
+
+        <!-- Order Success -->
+        <div id="orderSuccess" class="order-success" style="display: none;">
+            <div class="success-card">
+                <div class="success-icon">
+                    <svg width="64" height="64" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                </div>
+                <h2>Order Placed Successfully!</h2>
+                <p>Thank you for your order. You will receive a confirmation email shortly.</p>
+                <a href="index.html" class="btn btn-primary">Continue Shopping</a>
+            </div>
+        </div>
+
+        <!-- Cart Grid -->
+        <div id="cartGrid" class="cart-grid" style="display: none;">
+            <!-- Cart Items -->
+            <div class="cart-items">
+                <div id="cartItemsList"></div>
+            </div>
+
+            <!-- Order Summary -->
+            <div class="order-summary">
+                <div class="summary-card">
+                    <h2>Order Summary</h2>
+                    
+                    <div class="summary-details">
+                        <div class="summary-row">
+                            <span>Subtotal</span>
+                            <span id="subtotalAmount">$0.00</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Shipping</span>
+                            <span class="free-text">FREE</span>
+                        </div>
+                        <div class="summary-divider"></div>
+                        <div class="summary-row total-row">
+                            <span>Total</span>
+                            <span id="totalAmount">$0.00</span>
+                        </div>
+                    </div>
+
+                    <!-- Payment Method Selection -->
+                    <div class="payment-method">
+                        <h3>Payment Method</h3>
+                        <div class="payment-options">
+                            <label class="payment-option">
+                                <input type="radio" name="payment" value="cod" checked>
+                                <span>Cash on Delivery (COD)</span>
+                            </label>
+                            <label class="payment-option">
+                                <input type="radio" name="payment" value="card">
+                                <span>Credit/Debit Card</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <button id="checkoutBtn" class="btn btn-primary btn-block">Place Order</button>
+                    
+                    <a href="index.html" class="continue-shopping">Continue Shopping</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p>Email: Care@attire.store</p>
+                    <p>Phone: +1-672-365-8854</p>
+                    <p>123 Fashion Street<br>New York, NY 10001<br>United States</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <a href="about.html">About Us</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms & Conditions</a>
+                    <a href="returns.html">Return & Refund Policy</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Business Hours</h3>
+                    <p>Monday - Friday: 9:00 AM - 6:00 PM EST</p>
+                    <p>Saturday: 10:00 AM - 4:00 PM EST</p>
+                    <p>Sunday: Closed</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Everyday Attire. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="cart.js"></script>
+</body>
+</html>
